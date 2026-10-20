@@ -1,6 +1,8 @@
 # Chaque matin : récupère les nouvelles ventes aux enchères, met à jour
 # public/data/annonces.json, vous prévient par e-mail (via une « issue » GitHub)
-# s'il y a du nouveau, puis republie l'appli sur GitHub Pages.
+# s'il y a du nouveau, puis vérifie l'appli (tests + build).
+# La publication sur GitHub Pages ne s'active que si la variable de dépôt
+# PUBLIER_SUR_PAGES vaut "oui" (Settings → Secrets and variables → Actions → Variables).
 name: Veille et publication
 
 on:
@@ -73,13 +75,10 @@ jobs:
               --body "@${{ github.repository_owner }} Une ou plusieurs pages n'ont pas pu être lues (voir le journal de l'action : ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}). Le site a peut-être changé de mise en page : ouvrez ce dépôt avec Claude Code et demandez-lui de corriger scripts/lib/cir-colmar-metz.ts."
           fi
 
-  publication:
+  verification:
     needs: veille
     if: always() && needs.veille.result != 'failure' && needs.veille.result != 'cancelled'
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploiement.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -91,6 +90,24 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: dist
+          retention-days: 3
+
+  publication:
+    needs: verification
+    if: always() && needs.verification.result == 'success' && vars.PUBLIER_SUR_PAGES == 'oui'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: dist
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -13,14 +13,19 @@ Vos biens, notes et photos restent **dans votre navigateur** (rien n'est envoyé
 
 ## Mise en ligne (une seule fois)
 
-1. Sur GitHub, ouvrez le dépôt, puis **Settings → Pages**. Dans « Build and deployment », choisissez **Source : GitHub Actions**.
-2. Ouvrez l'onglet **Actions**, cliquez sur « Veille et publication » puis **Run workflow**.
-3. Quelques minutes plus tard, l'appli est en ligne à l'adresse `https://<votre-nom>.github.io/<nom-du-depot>/`.
-4. Sur le téléphone, ouvrez cette adresse puis « Ajouter à l'écran d'accueil » : l'appli s'ouvre comme une application.
+La veille tourne chaque matin dans l'onglet **Actions**, que l'appli soit publiée ou non. Pour l'utiliser depuis un navigateur ou un téléphone, choisissez l'une de ces deux options :
 
-> GitHub Pages gratuit nécessite un dépôt **public**. Le dépôt ne contient aucune donnée personnelle (vos biens restent dans votre navigateur ; les annonces sont publiques et la veille ne recopie aucun nom de débiteur ou d'occupant). Si vous voulez un dépôt privé, il faut un compte GitHub Pro, ou publier sur Vercel ou Netlify.
+**Option A : Vercel (dépôt privé possible, gratuit).** Sur vercel.com, « Add New… → Project », importez ce dépôt et validez (Vite est détecté tout seul). Chaque mise à jour de la veille republie l'appli automatiquement.
 
-Pour recevoir les e-mails de nouvelles annonces, vérifiez que vous « regardez » le dépôt (bouton **Watch** en haut, option « All Activity » ou « Issues »).
+**Option B : GitHub Pages (dépôt public obligatoire sur un compte gratuit).**
+1. Settings → General → passez le dépôt en **Public**. Il ne contient aucune donnée personnelle : vos biens restent dans votre navigateur, et la veille ne recopie aucun nom de débiteur ou d'occupant.
+2. Settings → Pages → **Source : GitHub Actions**.
+3. Settings → Secrets and variables → Actions → onglet **Variables** → nouvelle variable `PUBLIER_SUR_PAGES` avec la valeur `oui`.
+4. Actions → « Veille et publication » → **Run workflow**. L'appli sera à l'adresse `https://<votre-nom>.github.io/chasseur-biens-alsace/`.
+
+Sur le téléphone, ouvrez l'adresse puis « Ajouter à l'écran d'accueil » : l'appli s'ouvre comme une application.
+
+Pour recevoir les e-mails de nouvelles annonces, vérifiez que vous « regardez » le dépôt (bouton **Watch**, option « All Activity » ou « Issues »).
 
 ## Travailler sur l'outil avec Claude Code
 
