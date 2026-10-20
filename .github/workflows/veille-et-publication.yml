@@ -1,8 +1,8 @@
 # Chaque matin : récupère les nouvelles ventes aux enchères, met à jour
 # public/data/annonces.json, vous prévient par e-mail (via une « issue » GitHub)
 # s'il y a du nouveau, puis vérifie l'appli (tests + build).
-# La publication sur GitHub Pages ne s'active que si la variable de dépôt
-# PUBLIER_SUR_PAGES vaut "oui" (Settings → Secrets and variables → Actions → Variables).
+# Publication sur GitHub Pages automatique si le dépôt est public
+# (ou si la variable de dépôt PUBLIER_SUR_PAGES vaut "oui").
 name: Veille et publication
 
 on:
@@ -98,7 +98,7 @@ jobs:
 
   publication:
     needs: verification
-    if: always() && needs.verification.result == 'success' && vars.PUBLIER_SUR_PAGES == 'oui'
+    if: always() && needs.verification.result == 'success' && (github.event.repository.private == false || vars.PUBLIER_SUR_PAGES == 'oui')
     runs-on: ubuntu-latest
     environment:
       name: github-pages

@@ -20,8 +20,7 @@ La veille tourne chaque matin dans l'onglet **Actions**, que l'appli soit publi�
 **Option B : GitHub Pages (dépôt public obligatoire sur un compte gratuit).**
 1. Settings → General → passez le dépôt en **Public**. Il ne contient aucune donnée personnelle : vos biens restent dans votre navigateur, et la veille ne recopie aucun nom de débiteur ou d'occupant.
 2. Settings → Pages → **Source : GitHub Actions**.
-3. Settings → Secrets and variables → Actions → onglet **Variables** → nouvelle variable `PUBLIER_SUR_PAGES` avec la valeur `oui`.
-4. Actions → « Veille et publication » → **Run workflow**. L'appli sera à l'adresse `https://<votre-nom>.github.io/chasseur-biens-alsace/`.
+3. Actions → « Veille et publication » → **Run workflow**. L'appli sera à l'adresse `https://<votre-nom>.github.io/chasseur-biens-alsace/`.
 
 Sur le téléphone, ouvrez l'adresse puis « Ajouter à l'écran d'accueil » : l'appli s'ouvre comme une application.
 
