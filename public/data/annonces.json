@@ -1,0 +1,213 @@
+{
+  "miseAJour": "2026-10-20T21:33:10.732Z",
+  "sources": [
+    {
+      "nom": "Notaires Colmar-Metz (68)",
+      "url": "https://cir-colmar-metz.notaires.fr/haut-rhin",
+      "ok": true,
+      "nb": 3
+    },
+    {
+      "nom": "Notaires Colmar-Metz (67)",
+      "url": "https://cir-colmar-metz.notaires.fr/bas-rhin",
+      "ok": true,
+      "nb": 5
+    },
+    {
+      "nom": "Notaires Colmar-Metz (57)",
+      "url": "https://cir-colmar-metz.notaires.fr/moselle",
+      "ok": true,
+      "nb": 0
+    }
+  ],
+  "annonces": [
+    {
+      "id": "cir-colmar-metz-1c7valt",
+      "source": "cir-colmar-metz",
+      "departement": "67",
+      "titre": "Appartement - Strasbourg",
+      "typeBien": "Appartement",
+      "commune": "Strasbourg",
+      "adresse": "4 Rue Sainte Hélène",
+      "miseAPrix": 175000,
+      "dateVente": "2026-09-29T14:30",
+      "visites": [
+        "2026-09-22T08:30"
+      ],
+      "occupation": "inconnu",
+      "surfaceM2": 60.09,
+      "garantie": 16000,
+      "lieuVente": "en l'office notarial de STRASBOURG (67000), 23 boulevard d'Anvers.",
+      "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/09/appartement-strasbourg.pdf",
+      "pageUrl": "https://cir-colmar-metz.notaires.fr/bas-rhin",
+      "premiereVue": "2026-10-20T21:16:51.967Z",
+      "derniereVue": "2026-10-20T21:33:10.732Z",
+      "active": true
+    },
+    {
+      "id": "cir-colmar-metz-6il95p",
+      "source": "cir-colmar-metz",
+      "departement": "67",
+      "titre": "Maison - Entzheim",
+      "typeBien": "Maison",
+      "commune": "Entzheim",
+      "adresse": "14 Rue de la Hache",
+      "miseAPrix": 195000,
+      "dateVente": "2026-10-08",
+      "visites": [
+        "2026-09-23T10:00"
+      ],
+      "occupation": "inconnu",
+      "lieuVente": "GEISPOLSHEIM (67118), 15 rue du Wiesel, Maître Stéphanie MEYER, en son Office,",
+      "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/09/maison-entzheim.pdf",
+      "pageUrl": "https://cir-colmar-metz.notaires.fr/bas-rhin",
+      "premiereVue": "2026-10-20T21:16:51.967Z",
+      "derniereVue": "2026-10-20T21:33:10.732Z",
+      "active": true
+    },
+    {
+      "id": "cir-colmar-metz-19h03u3",
+      "source": "cir-colmar-metz",
+      "departement": "68",
+      "titre": "Appartement - Colmar",
+      "typeBien": "Appartement",
+      "commune": "Colmar",
+      "adresse": "3 Rue Jacquart",
+      "miseAPrix": 75000,
+      "dateVente": "2026-10-16T14:30",
+      "visites": [
+        "2026-09-22T14:00",
+        "2026-10-01T11:00"
+      ],
+      "occupation": "inconnu",
+      "surfaceM2": 59.34,
+      "fraisForfaitPct": 9,
+      "lieuVente": "Etude notariale de Me Magali Mulhaupt, 8 place de la Gare à COLMAR (68000)",
+      "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/09/appartement-colmar-6aad021f97d57.pdf",
+      "pageUrl": "https://cir-colmar-metz.notaires.fr/haut-rhin",
+      "premiereVue": "2026-10-20T21:16:51.967Z",
+      "derniereVue": "2026-10-20T21:33:10.732Z",
+      "active": true
+    },
+    {
+      "id": "cir-colmar-metz-rz8gny",
+      "source": "cir-colmar-metz",
+      "departement": "67",
+      "titre": "Maison - Sarre-Union",
+      "typeBien": "Maison",
+      "commune": "Sarre-Union",
+      "adresse": "18 Rue du Muguet",
+      "miseAPrix": 60000,
+      "dateVente": "2026-11-13T14:30",
+      "visites": [
+        "2026-11-06T11:00",
+        "2026-11-12T11:00"
+      ],
+      "dpe": "E",
+      "occupation": "libre",
+      "terrainM2": 480,
+      "garantie": 10000,
+      "lieuVente": "Etude Nicolas CHAPOUTOT et Thomas EHRHARDT, 48 rue du Général Leclerc, 67540 OSTWALD",
+      "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/10/maison-sarre-union.pdf",
+      "pageUrl": "https://cir-colmar-metz.notaires.fr/bas-rhin",
+      "premiereVue": "2026-10-20T21:16:51.967Z",
+      "derniereVue": "2026-10-20T21:33:10.732Z",
+      "active": true
+    },
+    {
+      "id": "cir-colmar-metz-l5xosq",
+      "source": "cir-colmar-metz",
+      "departement": "67",
+      "titre": "Biens immobilier - Strasbourg",
+      "typeBien": "Biens immobilier",
+      "commune": "Strasbourg",
+      "adresse": "3 Quai Rouget de Lisle",
+      "miseAPrix": 700000,
+      "dateVente": "2026-11-19T14:00",
+      "visites": [],
+      "dpe": "D",
+      "occupation": "inconnu",
+      "surfaceM2": 200.21,
+      "lieuVente": "Etude de Maître Stéphane FAGOT, 26, rue Finkmatt, 67000 STRASBOURG",
+      "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/10/biens-immobiliers-strasbourg.pdf",
+      "pageUrl": "https://cir-colmar-metz.notaires.fr/bas-rhin",
+      "premiereVue": "2026-10-20T21:16:51.967Z",
+      "derniereVue": "2026-10-20T21:33:10.732Z",
+      "active": true
+    },
+    {
+      "id": "cir-colmar-metz-tj96xy",
+      "source": "cir-colmar-metz",
+      "departement": "68",
+      "titre": "Maison - Mulhouse",
+      "typeBien": "Maison",
+      "commune": "Mulhouse",
+      "adresse": "Rue Pierre Brossolette",
+      "miseAPrix": 90000,
+      "dateVente": "2026-11-20T14:00",
+      "visites": [
+        "2026-10-19T17:30",
+        "2026-11-09T16:30"
+      ],
+      "dpe": "F",
+      "occupation": "occupé",
+      "terrainM2": 494,
+      "garantie": 9000,
+      "fraisForfaitPct": 8.8,
+      "lieuVente": "Office notarial SCP Patrick MUNCH – Mathieu LEININGER, 51 rue du Château Zu Rhein, 68200 Mulhouse",
+      "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/10/maison-mulhouse-6abfa72c40ccf.pdf",
+      "pageUrl": "https://cir-colmar-metz.notaires.fr/haut-rhin",
+      "premiereVue": "2026-10-20T21:16:51.967Z",
+      "derniereVue": "2026-10-20T21:33:10.732Z",
+      "active": true
+    },
+    {
+      "id": "cir-colmar-metz-1tbus73",
+      "source": "cir-colmar-metz",
+      "departement": "67",
+      "titre": "Lot de copropriété - Selestat",
+      "typeBien": "Lot de copropriété",
+      "commune": "Selestat",
+      "miseAPrix": 98000,
+      "dateVente": "2026-11-20T14:00",
+      "visites": [
+        "2026-10-23T10:00"
+      ],
+      "dpe": "C",
+      "occupation": "inconnu",
+      "garantie": 8000,
+      "lieuVente": "Etude Thomas Stehlin et Peggy Jund, 7 boulevard du Général Leclerc",
+      "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/10/lot-de-copropriete-selestat.pdf",
+      "pageUrl": "https://cir-colmar-metz.notaires.fr/bas-rhin",
+      "premiereVue": "2026-10-20T21:16:51.967Z",
+      "derniereVue": "2026-10-20T21:33:10.732Z",
+      "active": true
+    },
+    {
+      "id": "cir-colmar-metz-19d5a9r",
+      "source": "cir-colmar-metz",
+      "departement": "68",
+      "titre": "Maison mitoyenne - Mulhouse",
+      "typeBien": "Maison mitoyenne",
+      "commune": "Mulhouse",
+      "adresse": "Rue de Hericourt",
+      "miseAPrix": 95000,
+      "dateVente": "2026-11-27T14:00",
+      "visites": [
+        "2026-10-12T14:00",
+        "2026-11-12T14:00"
+      ],
+      "dpe": "E",
+      "occupation": "occupé",
+      "terrainM2": 182,
+      "garantie": 19000,
+      "fraisForfaitPct": 12,
+      "lieuVente": "Office notarial SCP Patrick MUNCH – Mathieu LEININGER, 51 rue du Château Zu Rhein, 68200 Mulhouse",
+      "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/10/maison-mulhouse.pdf",
+      "pageUrl": "https://cir-colmar-metz.notaires.fr/haut-rhin",
+      "premiereVue": "2026-10-20T21:16:51.967Z",
+      "derniereVue": "2026-10-20T21:33:10.732Z",
+      "active": true
+    }
+  ]
+}

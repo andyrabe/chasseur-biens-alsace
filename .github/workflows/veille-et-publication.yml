@@ -1,0 +1,99 @@
+# Chaque matin : récupère les nouvelles ventes aux enchères, met à jour
+# public/data/annonces.json, vous prévient par e-mail (via une « issue » GitHub)
+# s'il y a du nouveau, puis republie l'appli sur GitHub Pages.
+name: Veille et publication
+
+on:
+  schedule:
+    - cron: '47 5 * * *' # 5 h 47 UTC, soit vers 7 h 47 à Paris en été et 6 h 47 en hiver
+  workflow_dispatch: # bouton « Run workflow » dans l'onglet Actions
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: veille-et-publication
+  cancel-in-progress: false
+
+jobs:
+  veille:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    outputs:
+      nouvelles: ${{ steps.veille.outputs.nouvelles }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Récupérer les annonces
+        id: veille
+        run: npm run veille
+      - name: Enregistrer les changements
+        run: |
+          git config user.name "veille-automatique"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/annonces.json
+          if git diff --cached --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "Veille du $(date -u +%Y-%m-%d)"
+            git push
+          fi
+      - name: Prévenir des nouvelles annonces
+        if: steps.veille.outputs.nouvelles != '0' && steps.veille.outputs.nouvelles != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create "nouvelles-annonces" --color "a3402d" --description "Ventes aux enchères repérées par la veille" 2>/dev/null || true
+          {
+            echo "@${{ github.repository_owner }} ${{ steps.veille.outputs.nouvelles }} nouvelle(s) vente(s) aux enchères en Alsace :"
+            echo
+            cat .veille-cache/nouvelles.md
+            echo
+            echo "Fermez cette issue une fois lue. Toutes les annonces sont dans l'appli, onglet Enchères."
+          } > corps.md
+          gh issue create --title "Nouvelles enchères du $(date -u +%d/%m/%Y)" --body-file corps.md --label "nouvelles-annonces"
+      - name: Signaler un problème de récupération
+        if: steps.veille.outputs.erreurs != '0' && steps.veille.outputs.erreurs != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create "veille-en-panne" --color "9a6a12" --description "La récupération des annonces a échoué" 2>/dev/null || true
+          if [ -z "$(gh issue list --label veille-en-panne --state open --json number --jq '.[0].number')" ]; then
+            gh issue create --label "veille-en-panne" \
+              --title "La veille des enchères a rencontré un problème" \
+              --body "@${{ github.repository_owner }} Une ou plusieurs pages n'ont pas pu être lues (voir le journal de l'action : ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}). Le site a peut-être changé de mise en page : ouvrez ce dépôt avec Claude Code et demandez-lui de corriger scripts/lib/cir-colmar-metz.ts."
+          fi
+
+  publication:
+    needs: veille
+    if: always() && needs.veille.result != 'failure' && needs.veille.result != 'cancelled'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main # inclut le commit de la veille qui vient d'être poussé
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deploiement
+        uses: actions/deploy-pages@v4
