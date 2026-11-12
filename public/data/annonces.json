@@ -1,5 +1,5 @@
 {
-  "miseAJour": "2026-11-11T12:58:51.909Z",
+  "miseAJour": "2026-11-12T14:00:42.292Z",
   "sources": [
     {
       "nom": "Notaires Colmar-Metz (68)",
@@ -11,7 +11,7 @@
       "nom": "Notaires Colmar-Metz (67)",
       "url": "https://cir-colmar-metz.notaires.fr/bas-rhin",
       "ok": true,
-      "nb": 5
+      "nb": 4
     },
     {
       "nom": "Notaires Colmar-Metz (57)",
@@ -42,7 +42,7 @@
       "pageUrl": "https://cir-colmar-metz.notaires.fr/bas-rhin",
       "premiereVue": "2026-10-20T21:16:51.967Z",
       "derniereVue": "2026-11-11T12:58:51.909Z",
-      "active": true
+      "active": false
     },
     {
       "id": "cir-colmar-metz-6il95p",
@@ -63,7 +63,7 @@
       "pageUrl": "https://cir-colmar-metz.notaires.fr/bas-rhin",
       "premiereVue": "2026-10-20T21:16:51.967Z",
       "derniereVue": "2026-11-11T12:58:51.909Z",
-      "active": true
+      "active": false
     },
     {
       "id": "cir-colmar-metz-19h03u3",
@@ -86,7 +86,7 @@
       "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/09/appartement-colmar-6aad021f97d57.pdf",
       "pageUrl": "https://cir-colmar-metz.notaires.fr/haut-rhin",
       "premiereVue": "2026-10-20T21:16:51.967Z",
-      "derniereVue": "2026-11-11T12:58:51.909Z",
+      "derniereVue": "2026-11-12T14:00:42.292Z",
       "active": true
     },
     {
@@ -111,7 +111,7 @@
       "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/10/maison-sarre-union.pdf",
       "pageUrl": "https://cir-colmar-metz.notaires.fr/bas-rhin",
       "premiereVue": "2026-10-20T21:16:51.967Z",
-      "derniereVue": "2026-11-11T12:58:51.909Z",
+      "derniereVue": "2026-11-12T14:00:42.292Z",
       "active": true
     },
     {
@@ -132,7 +132,7 @@
       "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/10/biens-immobiliers-strasbourg.pdf",
       "pageUrl": "https://cir-colmar-metz.notaires.fr/bas-rhin",
       "premiereVue": "2026-10-20T21:16:51.967Z",
-      "derniereVue": "2026-11-11T12:58:51.909Z",
+      "derniereVue": "2026-11-12T14:00:42.292Z",
       "active": true
     },
     {
@@ -158,7 +158,7 @@
       "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/10/maison-mulhouse-6abfa72c40ccf.pdf",
       "pageUrl": "https://cir-colmar-metz.notaires.fr/haut-rhin",
       "premiereVue": "2026-10-20T21:16:51.967Z",
-      "derniereVue": "2026-11-11T12:58:51.909Z",
+      "derniereVue": "2026-11-12T14:00:42.292Z",
       "active": true
     },
     {
@@ -180,7 +180,25 @@
       "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/10/lot-de-copropriete-selestat.pdf",
       "pageUrl": "https://cir-colmar-metz.notaires.fr/bas-rhin",
       "premiereVue": "2026-10-20T21:16:51.967Z",
-      "derniereVue": "2026-11-11T12:58:51.909Z",
+      "derniereVue": "2026-11-12T14:00:42.292Z",
+      "active": true
+    },
+    {
+      "id": "cir-colmar-metz-6w744l",
+      "source": "cir-colmar-metz",
+      "departement": "67",
+      "titre": "Prés - Saint Pierre Bois & Thanville",
+      "typeBien": "Prés",
+      "commune": "Saint Pierre Bois & Thanville",
+      "miseAPrix": 155000,
+      "dateVente": "2026-11-27",
+      "visites": [],
+      "occupation": "inconnu",
+      "lieuVente": "Etude Claude Nuss et Benjamin Moreau, 7 Route de Kintzheim, 67730 Chatenois",
+      "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/11/pres-bas-rhin.pdf",
+      "pageUrl": "https://cir-colmar-metz.notaires.fr/bas-rhin",
+      "premiereVue": "2026-11-12T14:00:42.292Z",
+      "derniereVue": "2026-11-12T14:00:42.292Z",
       "active": true
     },
     {
@@ -206,7 +224,7 @@
       "pdfUrl": "https://cir-colmar-metz.notaires.fr/storage/file_manager_files/2026/10/maison-mulhouse.pdf",
       "pageUrl": "https://cir-colmar-metz.notaires.fr/haut-rhin",
       "premiereVue": "2026-10-20T21:16:51.967Z",
-      "derniereVue": "2026-11-11T12:58:51.909Z",
+      "derniereVue": "2026-11-12T14:00:42.292Z",
       "active": true
     }
   ]
